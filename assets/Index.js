@@ -6,5 +6,12 @@ const player = new MediaPlayer({
     plugins: [new AutoPlay()]
  });
 
-const button = document.querySelector("button");
+const button = document.querySelector(".play");
 button.onclick = () => player.togglePlay();
+
+const buttonMute = document.querySelector(".mute");
+buttonMute.onclick = () =>{
+    player.toggleMute();
+    buttonMute.textContent= player.MuteText();
+    
+} 
